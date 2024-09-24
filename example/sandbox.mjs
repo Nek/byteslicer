@@ -1,4 +1,3 @@
-
 import {  takeAtMost, zipToShortest, zipToLongest, zipForever, all, forever } from '/lib/iters.mjs'
 
 const assert = (iter, test) => {

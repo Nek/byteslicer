@@ -1,6 +1,6 @@
 {
   "name": "byteslicer",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "main": "index.js",
   "module": "index.mjs",
   "dependencies": {
@@ -12,5 +12,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "Slicing the bytes!"
 }
