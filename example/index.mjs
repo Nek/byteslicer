@@ -1,10 +1,29 @@
-import { $number, INT8_DOMAIN, fitVector, decode, mapItems, splitIntoItems, zipForever, takeAtMost, forever } from '/index.mjs'
+import {
+  $number,
+  INT8_DOMAIN,
+  fitVector,
+  decode,
+  mapByItem,
+  zipForever,
+} from '../index.mjs'
 
 const position = (dataBlock, { P_MIN, P_MAX }) => {
   const INT8_MIN = [INT8_DOMAIN[0]]
   const INT8_MAX = [INT8_DOMAIN[1]]
-  return mapItems(new Float32Array(dataBlock), 3, (item) =>
-    fitVector(item, zipForever(INT8_MIN, INT8_MAX), zipForever(P_MIN, P_MAX))
+  return mapByItem(
+    new Float32Array(dataBlock),
+    new Float32Array((dataBlock.length / 3) * 4),
+    3,
+    (item) => {
+      const res = [
+        ...fitVector(
+          item,
+          zipForever(INT8_MIN, INT8_MAX),
+          zipForever(P_MIN, P_MAX)
+        ),
+      ]
+      return [...res, 1.0]
+    }
   )
 }
 
