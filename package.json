@@ -1,18 +1,39 @@
 {
   "name": "byteslicer",
   "version": "0.6.3",
+  "description": "Slicing the bytes!",
   "main": "index.js",
   "module": "index.mjs",
+  "type": "module",
+  "files": [
+    "lib/",
+    "index.js",
+    "index.mjs"
+  ],
   "dependencies": {
     "esm": "^3.2.25"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikdudnik/byteslicer.git"
+  },
+  "keywords": [
+    "bytes",
+    "buffer",
+    "slice",
+    "binary",
+    "data"
+  ],
   "author": "Nikita (Anatolievich) Dudnik <nikdudnik@gmail.com>",
   "license": "MIT",
-  "description": "Slicing the bytes!"
+  "bugs": {
+    "url": "https://github.com/nikdudnik/byteslicer/issues"
+  },
+  "homepage": "https://github.com/nikdudnik/byteslicer#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  }
 }
-
-// Add missing info to this file AI!
